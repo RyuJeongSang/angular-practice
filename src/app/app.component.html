@@ -1,6 +1,3 @@
-<main>
-  <section>
-    <button (click)="clickAlert()">title: {{ title }}</button>
-    <div *ngFor="let item of showData">{{ item }}</div>
-  </section>
-</main>
+<app-helloworld (click)="onClickVisible()"></app-helloworld>
+<br />
+<app-isvisible *ngIf="visible"></app-isvisible>

@@ -8,21 +8,9 @@ const DATA: Array<string> = ['data0', 'data1', 'data2'];
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-tutorial';
+  visible: boolean = true;
 
-  showData: Array<string>;
-
-  constructor() {
-    this.showData = DATA;
-  }
-
-  public clickAlert = () => {
-    alert('클릭하셨습니다.');
-    this._innerFunc();
-    console.log(DATA);
-  };
-
-  private _innerFunc = () => {
-    DATA.push('data' + DATA.length);
+  public onClickVisible = () => {
+    this.visible = !this.visible;
   };
 }
